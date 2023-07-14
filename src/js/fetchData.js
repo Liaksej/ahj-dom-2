@@ -1,8 +1,7 @@
-export async function fetchData() {
-  try {
-    const response = await fetch("../../data.json");
-    return await response.json();
-  } catch (error) {
-    console.error("Error:", error);
-  }
+import jsonfile from "../../data.json";
+
+// Здесь могла бы быть феч-функция загрузки файла.
+
+export function fetchData() {
+  return jsonfile;
 }
