@@ -1,13 +1,12 @@
 export function createTab(jsonData) {
   const rows = [];
-  const dd = jsonData;
-  dd.forEach((item) => {
+  jsonData.forEach((item) => {
     rows.push(
-      `<tr data-id=${item.id} data-title=${item.title} data-year=${
+      `<tr data-id=${item.id} data-title="${item.title}" data-year=${
         item.year
       } data-imdb=${item.imdb}>
         <td>#${item.id}</td>
-        <td>${item.title}</td>
+        <td>${item["title"]}</td>
         <td>(${item.year})</td>
         <td>imdb: ${item.imdb.toFixed(2)}</td>
       </tr>`,
